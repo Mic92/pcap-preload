@@ -1,0 +1,17 @@
+[package]
+name = "pcap-preload"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+anyhow = "1.0.70"
+lazy_static = "1.4.0"
+pcap-file = { version = "2.0.0", default-features = false }
+
+[lib]
+name = "pcap_preload"
+crate_type = ["dylib"]
+libc = "0.2"
